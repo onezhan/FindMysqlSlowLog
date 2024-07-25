@@ -68,6 +68,7 @@ def GetSql(seekSize : int ):
             yield querySql
 
 def extract_content_after_time(file_path, target_time):
+    ###当文件过大时，定位到对应时间点。
     with open(file_path, 'r',encoding='utf8') as file:
         lines = file.readlines()
         target_time_Date = datetime.strptime(target_time, '%Y-%m-%d %H:%M:%S')
@@ -85,6 +86,7 @@ def extract_content_after_time(file_path, target_time):
 
 if __name__ == '__main__' :
     filePath = "mysql-slow.log"
+    ##从这个时间点开找
     timeStr = "2024-07-22 00:00:00"
     # SeekSize = extract_content_after_time(filePath,timeStr)
     SeekSize = 160569701
