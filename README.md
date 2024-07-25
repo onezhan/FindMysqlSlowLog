@@ -1,0 +1,2 @@
+# FindMysqlSlowLog
+当mysql被某条或某几条sql拖垮时，重复执行slow log中的所有sql，用以找到对应的真实的慢sql
