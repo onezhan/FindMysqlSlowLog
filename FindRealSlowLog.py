@@ -88,7 +88,7 @@ if __name__ == '__main__' :
     filePath = "mysql-slow.log"
     ##从这个时间点开找
     timeStr = "2024-07-22 00:00:00"
-    # SeekSize = extract_content_after_time(filePath,timeStr)
-    SeekSize = 160569701
+    SeekSize = extract_content_after_time(filePath,timeStr)
+    # SeekSize = 160569701
     for sql in GetSql(SeekSize):
         execute_sql(sql)
